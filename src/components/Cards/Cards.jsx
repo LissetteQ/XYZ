@@ -34,7 +34,7 @@ const Cards = ({ category, searchTerm }) => {
         const fetchNews = async () => {
             try {
                 const response = await axios.get(
-                    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`,
+                    `https://gnews.io/api/v4/top-headlines?category=${category}&apikey=${import.meta.env.VITE_NEWS_API_KEY}`,
                     {}
                 );
                 setNews(response.data.articles);
@@ -81,7 +81,7 @@ const Cards = ({ category, searchTerm }) => {
 
                                 <figure>
                                     <img
-                                        src={article.urlToImage ? article.urlToImage : Photo}
+                                        src={article.image ? article.image : Photo}
                                         alt="News"
                                         className="w-full"
                                     />
@@ -135,7 +135,7 @@ const Cards = ({ category, searchTerm }) => {
                                     <a href={article.url} target="_blank" rel="noopener noreferrer">
                                         👉 Leer más
                                     </a>
-                                    <p>Autor: {article.author}</p>
+                                    <p>Autor: {article.source.name}</p>
 
                                 </div>
                             </div>
