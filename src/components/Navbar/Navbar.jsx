@@ -23,7 +23,8 @@ const Navbar = ({ setCategory, searchTerm, setSearchTerm }) => {
                 <li onClick={() => setCategory("entertainment")}><a>Entretenimiento</a></li>
                 <li onClick={() => setCategory("science")}><a>Ciencia</a></li>
                 <li onClick={() => setCategory("sports")}><a>Deportes</a></li>
-
+                <li onClick={() => setCategory("world")}><a>Mundo</a></li>
+                <li onClick={() => setCategory("nation")}><a>Nacional</a></li>
               </ul>
             </li>
             <li><Link to="/library">Mi Colección</Link></li>
@@ -47,6 +48,8 @@ const Navbar = ({ setCategory, searchTerm, setSearchTerm }) => {
                 <li onClick={() => setCategory("entertainment")}><a>Entretenimiento</a></li>
                 <li onClick={() => setCategory("science")}><a>Ciencia</a></li>
                 <li onClick={() => setCategory("sports")}><a>Deportes</a></li>
+                <li onClick={() => setCategory("world")}><a>Mundo</a></li>
+                <li onClick={() => setCategory("nation")}><a>Nacional</a></li>
 
               </ul>
             </details>
@@ -54,8 +57,6 @@ const Navbar = ({ setCategory, searchTerm, setSearchTerm }) => {
           <li><Link to="/library">Mi Colección</Link></li>
         </ul>
       </div>
-
-
       <div className="mt-4 lg:ml-auto lg:mt-0 lg:w-96">
         <SearchBar searchTerm={searchTerm} onSearchTermChange={setSearchTerm} onSearchSubmit={() => { }} />
       </div>

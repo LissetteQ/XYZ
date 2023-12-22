@@ -3,12 +3,9 @@ import React from "react";
 const SearchBar = ({ searchTerm, onSearchTermChange, onSearchSubmit }) => {
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      console.log("Submitting search:", searchTerm);
       onSearchSubmit();
     }
   };
-
-  console.log("Search Term:", searchTerm);
 
   return (
     <input

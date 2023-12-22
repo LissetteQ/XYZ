@@ -49,7 +49,7 @@ const Library = () => {
 
                 <figure>
                     <img
-                        src={article.urlToImage ? article.urlToImage : Photo}
+                        src={article.image ? article.image : Photo}
                         alt="News"
                         className="w-full"
                     />
@@ -102,7 +102,7 @@ const Library = () => {
                     <a href={article.url} target="_blank" rel="noopener noreferrer">
                         👉 Leer más
                     </a>
-                    <p>Autor: {article.author}</p>
+                    <p>Autor: {article.source.name}</p>
 
                 </div>
             </div>
